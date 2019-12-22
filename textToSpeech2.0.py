@@ -7,11 +7,10 @@ creds = service_account.Credentials.from_service_account_file("/home/frank/Downl
 
 client = speech.SpeechClient(credentials=creds)
 
-with open("audio/Books/Palestine_gusav.wav", 'rb') as audio_file:
+with open("audio/Homonyms/dear_dear_vincent.wav", 'rb') as audio_file:
     content = audio_file.read()
 
-ground_truth = "In the short-term, these measures meant little. After securing Palestine, the \
-persians turned to the Nile delta, taking Alexandria in 619 AD."
+ground_truth = "She’s such a dear friend. The deer ate all the lettuce in the garden."
 
 
 audio = speech.types.RecognitionAudio(content=content)
